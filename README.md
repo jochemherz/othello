@@ -1,8 +1,7 @@
 # Othello
-Othello (also known as Reversi), built with [Processing for Android](https://android.processing.org/). This app rendition of the 2-player board game is perfect for killing time at a restaurant or in the waiting room. 
-As long as you don't mind it being a little bit of an eyesore... :joy:
+Othello (also known as Reversi), built with [Processing for Android](https://android.processing.org/). This app rendition of the 2-player board game is perfect for killing time at a restaurant or in the waiting room... as long as you don't mind it being a little bit of an eyesore. :joy:
 
-This app was made for Android devices, but it can also be easily ran on desktop.
+This app was made for Android devices, but it can also be easily configured to run on desktop computers.
 
 ### How To Play
 The app doesn't contain any sort of rulebook or tutorial.
@@ -11,16 +10,30 @@ If you want to learn how Othello is played, check the official rules [here](http
 ---
 ## How To Install/Run
 ### Direct Installation
-The easiest way to install the Othello app is to install the ***.apk*** file from the [**releases**](../../releases) folder onto your Android device. On the device, find and click the ***.apk*** file 
-to install (might be under *Downloads* in the *My Files* app). 
+The easiest way to install the Othello app is to install the ***.apk*** file from the [**releases**](https://github.com/jochemherz/othello/releases) folder onto your Android device. On the device, find and click the ***.apk*** file to install (it might be under *Downloads* in the *My Files* app). 
 
 ### On Desktop
-If you wish to **run the app on desktop**, all you have to do is: 
+If you wish to **run the app on desktop**, here is a quick step-by-step: 
 1. **Open the sketch** in the [Processing IDE](https://processing.org/download).
-2. Under the *void setup()* section of the code, **Comment out** or erase the first two statements. 
+2. Under the *void setup()* section of the code, **comment out** (or delete) the first two statements.
+3. **Add the line** `size(720, 900);` to set the size of the window.  
+*Note:* This app was designed for Android's *portrait mode*. You can choose a different size, but doing so might cause layout issues.
+4. The code should now look something like this:
+
+```java
+void setup(){
+  //fullScreen();
+  //orientation(PORTRAIT);
+  size(720,900);
+  font = createFont("PressStart2P-Regular.ttf", 48);
+  textFont(font);
+  ...
+  }
+```
+5. Press the **Run** button. :smiley:
 
 ### Via the IDE
-In order to run and install the app onto your **Android device via Processing's IDE** (for example, if you wish to customize some of the code of the app), here is a quick step by step:
+To run and install the app onto your **Android device via Processing's IDE** (for example, if you wish to modify some of the app's code), please follow these steps:
 1. **Open the sketch** in the [Processing IDE](https://processing.org/download).
 2. **Install/activate Android mode**  
 There should be a tab which reads *Java*, under the X button which closes the window. Click on the tab and then select *Manage Modes...*  
